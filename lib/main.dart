@@ -1,5 +1,4 @@
 import 'package:aula0703/view/create_account_page.dart';
-import 'package:aula0703/view/welcomePage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 102, 116, 185),
         ),
       ),
-      home: WelcomePage(),
+      home: CreateAccountPage(),
     );
   }
 }

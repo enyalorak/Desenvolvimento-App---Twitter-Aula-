@@ -123,13 +123,14 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                   // decoration: BoxDecoration(color: Colors.green),
                   child: ElevatedButton(
                     onPressed: () {
-                      UserApp newUserApp = UserApp(
-                        email: emailController.text,
-                        username: usuarioController.text,
-                        password: senhaController.text,
-                      );
-
-                      newUserApp.register(newUserApp);
+                      if (_formKey.currentState?.validate() == true) {
+                        UserApp newUserApp = UserApp(
+                          email: emailController.text,
+                          username: usuarioController.text,
+                          password: senhaController.text,
+                        );
+                        newUserApp.register(newUserApp);
+                      }
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.green),
